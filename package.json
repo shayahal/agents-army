@@ -1,0 +1,24 @@
+{
+  "name": "agents-army",
+  "version": "1.0.0",
+  "description": "Remote orchestration service for 8-agent content creation pipeline",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/**/*.test.js",
+    "test:watch": "node --watch --test tests/**/*.test.js"
+  },
+  "keywords": ["agents", "content-creation", "orchestration"],
+  "author": "Shay",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "bull": "^4.11.5",
+    "redis": "^4.6.10",
+    "ssh2": "^1.14.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {}
+}
