@@ -38,9 +38,11 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Agents-Army service listening on port ${PORT}`);
-});
-
 export default app;
+
+// Start server only if this file is run directly, not when imported as a module
+if (import.meta.url === `file://${process.argv[1]}`) {
+  app.listen(PORT, () => {
+    console.log(`Agents-Army service listening on port ${PORT}`);
+  });
+}
